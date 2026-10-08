@@ -62,7 +62,7 @@ The sandbox device flow links an actual accessible FHIR `Device` to a patient us
 
 Signals is read-only in this app. It does not change project settings, acknowledge alerts, compute risk scores, or recommend treatment. Human messaging and WebSocket subscriptions are not implemented in this EHR UI. The platform's FHIR Communication and subscription capabilities need project access, the WebSocket feature, and an end-to-end recipient authorization test before this example can claim chat behavior. There are no fabricated read receipts, delivery confirmations, or typing indicators.
 
-See the [capability matrix](https://github.com/Ovok-Dev/rpm-example-app/blob/dev/docs/capability-matrix.md), [FHIR mapping](https://github.com/Ovok-Dev/rpm-example-app/blob/dev/docs/fhir-resource-mapping.md), and [connected workflow](https://github.com/Ovok-Dev/rpm-example-app/blob/dev/docs/connected-workflow.md) for verified boundaries. This standalone repository also includes its own [capability-gap report](docs/capability-gaps.md).
+See the [capability matrix](docs/capability-matrix.md), [FHIR mapping](docs/fhir-resource-mapping.md), [connected workflow](docs/connected-workflow.md), and [capability-gap report](docs/capability-gaps.md). These references ship with the standalone repository and the Turborepo copy.
 
 ## Local synthetic relay
 
