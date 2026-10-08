@@ -15,7 +15,7 @@ import {
   sortDiary,
   type DiaryEntry,
 } from "./model";
-import { savePatientEntry } from "./ovok";
+import { publishDemoEntry, savePatientEntry } from "./ovok";
 
 type CareState = {
   entries: DiaryEntry[];
@@ -136,7 +136,13 @@ export function CareProvider({
           ? records
           : [entry, ...records],
       );
-    if (!isDemo) await upload(entry);
+    if (!isDemo) {
+      await upload(entry);
+      return;
+    }
+
+    const shared = await publishDemoEntry(entry);
+    setError(shared ? null : "Your synthetic check-in is saved on this phone. Start the local EHR demo to share it with the clinician examples.");
   }
 
   async function retry(): Promise<void> {

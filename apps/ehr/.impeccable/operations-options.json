@@ -1,0 +1,58 @@
+{
+  "title": "EHR operations overview",
+  "question": "Choose the composition that should lead the EHR. Each option keeps the confirmed operations-overview purpose and the existing Ovok purple design system. Lock one, and mention anything that feels wrong or should be combined.",
+  "options": [
+    {
+      "id": "daily-rounds",
+      "label": "Daily clinic rounds",
+      "kicker": "THE ROLL",
+      "lineage": "A clinic's morning handover sheet",
+      "thesis": "Today's work stays together on one operational sheet.",
+      "palette": ["#F8F7FB", "#5C3F96", "#171426", "#EAE8EF"],
+      "materials": ["cool lavender workspace", "white reading surfaces", "quiet hairline dividers", "soft purple navigation"],
+      "viewport": "Clinic navigation anchors a work sheet led by today's follow-ups and appointments; a narrow line of labeled counts summarizes intake, assignment, enrollment, and kit availability; patient rows open the canonical chart.",
+      "risk": "The overview can become a metric dashboard if the work queue loses priority.",
+      "comp": ".impeccable/mocks/decision/daily-rounds.png"
+    },
+    {
+      "id": "enrollment-workbench",
+      "label": "Enrollment workbench",
+      "lineage": "A care-coordinator's activation bench",
+      "thesis": "Every unfinished RPM enrollment is visible as a patient journey.",
+      "palette": ["#F8F7FB", "#5C3F96", "#171426", "#EAE8EF"],
+      "materials": ["cool lavender workspace", "white reading surfaces", "quiet hairline dividers", "soft purple navigation"],
+      "viewport": "An operations overview keeps clinic totals compact and puts in-progress patient lanes first: intake, clinician, CHF plan, questionnaire, and physical device assignment each show an owner and next action.",
+      "risk": "An enrollment-first layout can hide appointments and routine follow-up work.",
+      "comp": ".impeccable/mocks/decision/enrollment-workbench.png"
+    },
+    {
+      "id": "patient-register",
+      "label": "Patient review register",
+      "lineage": "A single-clinic patient worklist",
+      "thesis": "The patient list itself becomes the clinic's clear next-action index.",
+      "palette": ["#F8F7FB", "#5C3F96", "#171426", "#EAE8EF"],
+      "materials": ["cool lavender workspace", "white reading surfaces", "quiet hairline dividers", "soft purple navigation"],
+      "viewport": "A fast patient search sits above a dense but readable register; each row shows assignment, enrollment state, latest ECG/weight/questionnaire source time, and a chart action, with operations counts in the heading band.",
+      "risk": "A register can read like measurement review instead of a full operations overview.",
+      "comp": ".impeccable/mocks/decision/patient-register.png"
+    },
+    {
+      "id": "split-flap-queue",
+      "label": "Split-flap clinic queue",
+      "verdict": "competitive",
+      "lineage": "A station departure board's fixed columns and changing rows",
+      "thesis": "Clinic work becomes a glanceable queue with patient context in every row.",
+      "palette": ["#F8F7FB", "#5C3F96", "#171426", "#EAE8EF"],
+      "materials": ["fixed data columns", "stateful rows", "high-contrast text within the Ovok palette"],
+      "viewport": "The patient work queue is a stable table whose status and latest-reading cells update without moving its columns.",
+      "case": "Competitive: stateful rows and fixed columns suit quick scanning, but the station-board framing is less familiar than clinic handover.",
+      "risk": "Patient care can look like operational telemetry if the table overwhelms the patient context.",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse.webp",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp", "toggle": true },
+  "canon": false,
+  "steer": true
+}

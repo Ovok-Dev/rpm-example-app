@@ -1,12 +1,13 @@
 # Repository guidance
 
-This repository contains two Ovok CHF remote patient monitoring examples in npm workspaces: the Expo app in `apps/mobile` and the Vite clinician dashboard in `apps/dashboard`.
+This repository contains Ovok CHF remote patient monitoring and EHR examples in npm workspaces: the Expo patient app in `apps/mobile`, the Vite clinician dashboard in `apps/dashboard`, and the Vite EHR in `apps/ehr`.
 
 ## Product boundaries
 
 - Keep demo people, measurements, events, ECG traces, and weights explicitly synthetic.
 - The mobile app is patient-facing; the dashboard is clinician-facing and scoped to one project.
 - Keep the dashboard's Signals settings read-only. Do not change `episodicAlerts`, thresholds, enrollment, or alert acknowledgements.
+- Keep the EHR to one clinic/project. Use Ovok FHIR records and SDK methods for sandbox clinical data; keep synthetic data isolated and visibly labeled. Assignment does not grant backend access.
 - Do not infer a diagnosis, recommend treatment, or claim clinical certification. Preserve measurement sources and timestamps.
 - Do not pair Bluetooth devices in the dashboard. Follow the device declaration and exact-model IFU for the mobile app.
 - Never commit secrets, patient records, or local `.env` files. `EXPO_PUBLIC_` and `VITE_` values are included in browser or app bundles and must contain public configuration only.
@@ -22,6 +23,6 @@ This repository contains two Ovok CHF remote patient monitoring examples in npm 
 
 ## Validation
 
-Run `npm run check` from the repository root after changes. It runs both apps' tests and type checks, checks Expo package compatibility, builds the dashboard, and exports the mobile iOS JavaScript bundle. Run `npm run ios` on macOS to verify the simulator experience after native or mobile UI changes; Bluetooth requires a physical phone.
+Run `npm run check` from the repository root after changes. It runs the workspace tests, type checks, Expo package compatibility check, and production builds/bundles for all apps. Run `npm run ios` on macOS to verify the simulator experience after native or mobile UI changes; Bluetooth requires a physical phone.
 
-Each app also has focused instructions in `apps/mobile/AGENTS.md` and `apps/dashboard/AGENTS.md`.
+Each app also has focused instructions in `apps/mobile/AGENTS.md`, `apps/dashboard/AGENTS.md`, and `apps/ehr/AGENTS.md`.

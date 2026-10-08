@@ -13,6 +13,8 @@ export const tenantCode =
   process.env.EXPO_PUBLIC_TENANT_CODE ?? "public-example";
 export const apiUrl =
   process.env.EXPO_PUBLIC_OVOK_BASE_URL ?? "https://api.sandbox.ovok.com";
+export const demoRelayUrl =
+  process.env.EXPO_PUBLIC_DEMO_API_URL ?? "http://localhost:5174/__demo";
 const storage = createClientStorage(secureStorage, [
   "activeLogin",
   "logins",
@@ -71,4 +73,31 @@ export async function savePatientEntry(
     device: entry.device,
     measurement,
   });
+}
+
+export async function publishDemoEntry(entry: DiaryEntry): Promise<boolean> {
+  if (entry.source !== "demo") return false;
+  const measurement = {
+    id: entry.id,
+    patientId: "demo-2048",
+    kind: entry.kind,
+    recordedAt: entry.recordedAt,
+    source: "Ovok Care mobile demo",
+    value: entry.kind === "weight" ? entry.weight : null,
+    unit: entry.kind === "weight" ? "kg" : null,
+    waveform: entry.kind === "ecg" ? entry.waveform : undefined,
+    durationSeconds: entry.kind === "ecg" ? entry.duration : undefined,
+    answers: entry.kind === "questionnaire" ? entry.answers : undefined,
+  };
+
+  try {
+    const response = await fetch(`${demoRelayUrl}/measurements`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(measurement),
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
 }

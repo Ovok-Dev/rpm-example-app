@@ -57,7 +57,7 @@ Useful commands:
 | `npm test --workspace=ovok-rpm-clinician-dashboard` | Run this app's unit tests. |
 | `npm run build --workspace=ovok-rpm-clinician-dashboard` | Type-check and build the production bundle. |
 | `npm run preview:dashboard` | Serve the production bundle locally. |
-| `npm run check` | Check and build both workspace apps. |
+| `npm run check` | Check and build the mobile, dashboard, and EHR workspaces. |
 
 ## Connect an Ovok sandbox project
 
