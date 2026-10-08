@@ -3,6 +3,8 @@ import type { Patient } from "@medplum/fhirtypes";
 import type { OvokClient } from "@ovok/core";
 import { DEMO_PATIENTS } from "./data/demo";
 import { listProjectPatients, loadPatientReview } from "./lib/patientData";
+import { loadDemoRelay, withDemoRelayReadings } from "./lib/demoRelay";
+import { isFhirLogicalId } from "./lib/fhirId";
 import { getOvokClient, tenantCode } from "./lib/ovokClient";
 import type { PageId, PatientChoice, PatientReview } from "./types";
 import AppShell from "./components/AppShell";
@@ -25,10 +27,14 @@ const demoChoices: PatientChoice[] = DEMO_PATIENTS.map((patient) => ({
 export default function App() {
   const [page, setPage] = useState<PageId>("home");
   const [mode, setMode] = useState<WorkspaceMode>("demo");
-  const [selectedPatientId, setSelectedPatientId] = useState(
-    DEMO_PATIENTS[0]?.id ?? "",
+  const [linkedPatientId] = useState(() => new URLSearchParams(window.location.search).get("patient") ?? "");
+  const linkedDemoPatient = DEMO_PATIENTS.some((patient) => patient.id === linkedPatientId);
+  const [selectedPatientId, setSelectedPatientId] = useState(() =>
+    linkedPatientId ? linkedDemoPatient ? linkedPatientId : "" : DEMO_PATIENTS[0]?.id ?? "",
   );
   const [sandboxPatients, setSandboxPatients] = useState<Patient[]>([]);
+  const [demoRelayReadings, setDemoRelayReadings] = useState<Record<string, import("./lib/demoRelay").RelayMeasurement[]>>({});
+  const [demoRelayOnline, setDemoRelayOnline] = useState(false);
   const [sandboxReview, setSandboxReview] = useState<PatientReview | null>(null);
   const [reviewLoading, setReviewLoading] = useState(false);
   const [reviewError, setReviewError] = useState<string | null>(null);
@@ -41,6 +47,15 @@ export default function App() {
   const [signalsLoading, setSignalsLoading] = useState(false);
   const closeConnectDialog = useCallback(() => setConnectOpen(false), []);
 
+  useEffect(() => {
+    if (mode !== "demo" || !linkedPatientId) return;
+    if (!isFhirLogicalId(linkedPatientId)) {
+      setWorkspaceError("This patient link is invalid. Choose a record from the authorized patient list.");
+    } else if (!linkedDemoPatient) {
+      setWorkspaceError("This patient is not in the local synthetic workspace. Sign in to the sandbox to verify access.");
+    }
+  }, [linkedPatientId, linkedDemoPatient, mode]);
+
   const patientChoices = useMemo(
     () => mode === "demo" ? demoChoices : sandboxPatients.map(patientChoice),
     [mode, sandboxPatients],
@@ -52,6 +67,19 @@ export default function App() {
     (patient) => patient.id === selectedPatientId,
   ) ?? null;
   const activeReview = mode === "demo" ? demoReview : sandboxReview;
+
+  useEffect(() => {
+    let isCurrentRequest = true;
+    async function refreshRelay() {
+      const readings = await loadDemoRelay();
+      if (!isCurrentRequest) return;
+      setDemoRelayOnline(Boolean(readings));
+      if (readings) setDemoRelayReadings(readings);
+    }
+    void refreshRelay();
+    const timer = window.setInterval(() => void refreshRelay(), 5000);
+    return () => { isCurrentRequest = false; window.clearInterval(timer); };
+  }, []);
 
   useEffect(() => {
     if (mode !== "sandbox" || !selectedSandboxPatient) {
@@ -138,9 +166,22 @@ export default function App() {
     setWorkspaceError(null);
 
     try {
+      if (linkedPatientId && !isFhirLogicalId(linkedPatientId)) {
+        setSandboxPatients([]);
+        setSelectedPatientId("");
+        setWorkspaceError("This patient link is invalid. Choose the record again from the authorized patient list.");
+        return;
+      }
+
       const patients = await listProjectPatients(client);
-      setSandboxPatients(patients);
-      setSelectedPatientId(patients[0]?.id ?? "");
+      const linkedPatient = linkedPatientId
+        ? patients.find((patient) => patient.id === linkedPatientId) ??
+          await client.readResource("Patient", linkedPatientId)
+        : undefined;
+      setSandboxPatients(linkedPatient && !patients.some((patient) => patient.id === linkedPatient.id)
+        ? [linkedPatient, ...patients]
+        : patients);
+      setSelectedPatientId(linkedPatientId ? linkedPatient?.id ?? "" : patients[0]?.id ?? "");
     } catch (error) {
       setSandboxPatients([]);
       setSelectedPatientId("");
@@ -164,7 +205,20 @@ export default function App() {
   const selectPatient = (patientId: string) => {
     setSelectedPatientId(patientId);
     if (page !== "home") setPage("home");
+    const url = new URL(window.location.href);
+    url.searchParams.set("patient", patientId);
+    window.history.replaceState({}, "", url);
   };
+
+  function openEhrChart() {
+    if (!activeReview?.id) return;
+    const ehrUrl = import.meta.env.VITE_EHR_URL ?? "http://localhost:5174";
+    window.open(`${ehrUrl}/?patient=${encodeURIComponent(activeReview.id)}`, "_blank", "noopener,noreferrer");
+  }
+
+  const displayedReview = mode === "demo" && activeReview
+    ? withDemoRelayReadings(activeReview, demoRelayReadings[activeReview.id])
+    : activeReview;
 
   return (
     <AppShell
@@ -176,7 +230,7 @@ export default function App() {
     >
       {workspaceError && (
         <div className="workspace-error" role="alert">
-          <span>Sandbox connection needs attention</span>
+          <span>{mode === "sandbox" ? "Sandbox request needs attention" : "Patient link needs attention"}</span>
           <p>{workspaceError}</p>
           <button onClick={() => setConnectOpen(true)}>Review connection</button>
         </div>
@@ -184,13 +238,15 @@ export default function App() {
       {page === "home" && (
         <PatientReviewPage
           mode={mode}
-          review={activeReview}
+          review={displayedReview}
           patients={patientChoices}
           selectedPatientId={selectedPatientId}
           loading={reviewLoading}
           error={reviewError}
           onSelectPatient={selectPatient}
           onConnect={() => setConnectOpen(true)}
+          onOpenEhr={openEhrChart}
+          demoRelayOnline={demoRelayOnline}
         />
       )}
       {page === "patients" && (

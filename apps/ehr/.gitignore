@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.vercel/
+.env
+.env.local
+.env.*.local
+!.env.example
+*.tsbuildinfo
+.impeccable/references/
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/decision/daily-rounds.png
+.impeccable/mocks/decision/patient-register.png
+.impeccable/prompts/daily-rounds.txt
+.impeccable/prompts/patient-register.txt

@@ -174,7 +174,7 @@ Development uses `dev` as the default branch. Keep work on feature branches and 
 
 ## Checks
 
-Run `npm run check` from the monorepo root to type-check and test both apps, validate the Expo package versions, build the dashboard, and export the mobile iOS JavaScript bundle.
+Run `npm run check` from the monorepo root to type-check and test all three apps, validate the Expo package versions, build both web apps, and export the mobile iOS JavaScript bundle.
 
 The small Node test suite checks date boundaries, daily completion, questionnaire validation, synthetic fixtures, persistence, corrupted input, and retrying device readings after local storage failures. The simulator smoke flow in `tests/simulator.yaml` runs with [Maestro](https://docs.maestro.dev/):
 

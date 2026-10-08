@@ -12,6 +12,8 @@ interface PatientReviewPageProps {
   error: string | null;
   onSelectPatient: (id: string) => void;
   onConnect: () => void;
+  onOpenEhr: () => void;
+  demoRelayOnline: boolean;
 }
 
 export default function PatientReviewPage({
@@ -23,6 +25,8 @@ export default function PatientReviewPage({
   error,
   onSelectPatient,
   onConnect,
+  onOpenEhr,
+  demoRelayOnline,
 }: PatientReviewPageProps) {
   return (
     <div className="content-stack">
@@ -41,6 +45,7 @@ export default function PatientReviewPage({
             onChange={(event) => onSelectPatient(event.target.value)}
             disabled={!patients.length}
           >
+            {selectedPatientId === "" && <option value="">Choose an authorized patient</option>}
             {patients.length ? patients.map((patient) => (
               <option value={patient.id} key={patient.id}>{patient.name}</option>
             )) : <option value="">No patients available</option>}
@@ -51,7 +56,7 @@ export default function PatientReviewPage({
       {mode === "demo" && (
         <div className="demo-notice" role="note">
           <span className="demo-notice-icon"><FileHeart size={17} /></span>
-          <div><strong>Demo workspace</strong><span>Every patient and reading shown here is synthetic.</span></div>
+          <div><strong>Demo workspace</strong><span>Every patient and reading shown here is synthetic. {demoRelayOnline ? "Local mobile relay connected." : "Mobile relay unavailable; built-in fixtures remain visible."}</span></div>
           <button className="text-button" onClick={onConnect}>Connect sandbox <ArrowRight size={15} /></button>
         </div>
       )}
@@ -82,6 +87,7 @@ export default function PatientReviewPage({
               <span className="meta-label">LATEST CHECK-IN</span>
               <span className="meta-value"><CalendarClock size={16} />
                 {latestTimestamp(review)}</span>
+              <button className="text-button ehr-link" onClick={onOpenEhr}>Open EHR chart <ArrowRight size={14} /></button>
             </div>
           </section>
 
