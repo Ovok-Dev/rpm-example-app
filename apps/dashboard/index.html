@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An Ovok clinician dashboard example for reviewing CHF remote patient monitoring data."
+    />
+    <meta name="theme-color" content="#f8f7fb" />
+    <title>Ovok RPM · Clinician dashboard</title>
+  </head>
+  <body>
+    <!--
+      THESIS: Make one patient's latest CHF check-in legible through three peer readings, rather than burying measurement provenance in an alert-only list.
+      OWN-WORLD: Workspace #F8F7FB, navigation #F3F0F9, surfaces #FEFEFE, purple #5C3F96, near-black type #000014; soft 10–12px corners, fine dividers, clean system sans.
+      STORY: A clinician identifies the patient, reviews ECG, weight, and questionnaire with their sources and times, then opens history or returns to the patient list.
+      FIRST VIEWPORT: A 240px Ovok rail left; static CHF clinic context and patient search above the patient heading; one latest-check-in surface with equal ECG, weight, and questionnaire panels; activity below.
+      FORM: Patient Measurement Review, grounded candidate 5 of 7 chosen by the user; concept seed 1a6234e4.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

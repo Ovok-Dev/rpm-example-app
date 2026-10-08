@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": ["EXPO_PUBLIC_*", "VITE_*"]
+    },
+    "ios": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": ["EXPO_PUBLIC_*"]
+    },
+    "android": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": ["EXPO_PUBLIC_*"]
+    },
+    "preview": {
+      "cache": false,
+      "persistent": true
+    },
+    "typecheck": {},
+    "test": {},
+    "expo-check": {
+      "cache": false
+    },
+    "build": {
+      "env": ["VITE_*"],
+      "outputs": ["dist/**"]
+    },
+    "bundle": {
+      "env": ["EXPO_PUBLIC_*"],
+      "outputs": ["dist/**"]
+    }
+  }
+}

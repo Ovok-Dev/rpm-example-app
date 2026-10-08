@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T19:43:07+00:00",
+  "title": "Design System: Ovok Care",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Background",
+        "tonalRamp": [
+          "oklch(15.00% 0.0041 301.43)",
+          "oklch(26.43% 0.0041 301.43)",
+          "oklch(37.86% 0.0041 301.43)",
+          "oklch(49.29% 0.0041 301.43)",
+          "oklch(60.71% 0.0041 301.43)",
+          "oklch(72.14% 0.0041 301.43)",
+          "oklch(83.57% 0.0041 301.43)",
+          "oklch(95.00% 0.0041 301.43)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 0.00)",
+          "oklch(26.43% 0.0000 0.00)",
+          "oklch(37.86% 0.0000 0.00)",
+          "oklch(49.29% 0.0000 0.00)",
+          "oklch(60.71% 0.0000 0.00)",
+          "oklch(72.14% 0.0000 0.00)",
+          "oklch(83.57% 0.0000 0.00)",
+          "oklch(95.00% 0.0000 0.00)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0248 298.72)",
+          "oklch(26.43% 0.0248 298.72)",
+          "oklch(37.86% 0.0248 298.72)",
+          "oklch(49.29% 0.0248 298.72)",
+          "oklch(60.71% 0.0248 298.72)",
+          "oklch(72.14% 0.0248 298.72)",
+          "oklch(83.57% 0.0248 298.72)",
+          "oklch(95.00% 0.0248 298.72)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0292 303.05)",
+          "oklch(26.43% 0.0292 303.05)",
+          "oklch(37.86% 0.0292 303.05)",
+          "oklch(49.29% 0.0292 303.05)",
+          "oklch(60.71% 0.0292 303.05)",
+          "oklch(72.14% 0.0292 303.05)",
+          "oklch(83.57% 0.0292 303.05)",
+          "oklch(95.00% 0.0292 303.05)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0132 310.52)",
+          "oklch(26.43% 0.0132 310.52)",
+          "oklch(37.86% 0.0132 310.52)",
+          "oklch(49.29% 0.0132 310.52)",
+          "oklch(60.71% 0.0132 310.52)",
+          "oklch(72.14% 0.0132 310.52)",
+          "oklch(83.57% 0.0132 310.52)",
+          "oklch(95.00% 0.0132 310.52)"
+        ]
+      },
+      "tint": {
+        "role": "primary",
+        "displayName": "Tint",
+        "tonalRamp": [
+          "oklch(15.00% 0.1191 299.15)",
+          "oklch(26.43% 0.1191 299.15)",
+          "oklch(37.86% 0.1191 299.15)",
+          "oklch(49.29% 0.1191 299.15)",
+          "oklch(60.71% 0.1191 299.15)",
+          "oklch(72.14% 0.1191 299.15)",
+          "oklch(83.57% 0.1191 299.15)",
+          "oklch(95.00% 0.1191 299.15)"
+        ]
+      },
+      "wash": {
+        "role": "primary",
+        "displayName": "Wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.0168 304.80)",
+          "oklch(26.43% 0.0168 304.80)",
+          "oklch(37.86% 0.0168 304.80)",
+          "oklch(49.29% 0.0168 304.80)",
+          "oklch(60.71% 0.0168 304.80)",
+          "oklch(72.14% 0.0168 304.80)",
+          "oklch(83.57% 0.0168 304.80)",
+          "oklch(95.00% 0.0168 304.80)"
+        ]
+      },
+      "hero": {
+        "role": "primary",
+        "displayName": "Hero",
+        "tonalRamp": [
+          "oklch(15.00% 0.0946 300.09)",
+          "oklch(26.43% 0.0946 300.09)",
+          "oklch(37.86% 0.0946 300.09)",
+          "oklch(49.29% 0.0946 300.09)",
+          "oklch(60.71% 0.0946 300.09)",
+          "oklch(72.14% 0.0946 300.09)",
+          "oklch(83.57% 0.0946 300.09)",
+          "oklch(95.00% 0.0946 300.09)"
+        ]
+      },
+      "on-hero": {
+        "role": "primary",
+        "displayName": "On Hero",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 0.00)",
+          "oklch(26.43% 0.0000 0.00)",
+          "oklch(37.86% 0.0000 0.00)",
+          "oklch(49.29% 0.0000 0.00)",
+          "oklch(60.71% 0.0000 0.00)",
+          "oklch(72.14% 0.0000 0.00)",
+          "oklch(83.57% 0.0000 0.00)",
+          "oklch(95.00% 0.0000 0.00)"
+        ]
+      },
+      "hero-muted": {
+        "role": "primary",
+        "displayName": "Hero Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0401 304.93)",
+          "oklch(26.43% 0.0401 304.93)",
+          "oklch(37.86% 0.0401 304.93)",
+          "oklch(49.29% 0.0401 304.93)",
+          "oklch(60.71% 0.0401 304.93)",
+          "oklch(72.14% 0.0401 304.93)",
+          "oklch(83.57% 0.0401 304.93)",
+          "oklch(95.00% 0.0401 304.93)"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger",
+        "tonalRamp": [
+          "oklch(15.00% 0.1597 25.10)",
+          "oklch(26.43% 0.1597 25.10)",
+          "oklch(37.86% 0.1597 25.10)",
+          "oklch(49.29% 0.1597 25.10)",
+          "oklch(60.71% 0.1597 25.10)",
+          "oklch(72.14% 0.1597 25.10)",
+          "oklch(83.57% 0.1597 25.10)",
+          "oklch(95.00% 0.1597 25.10)"
+        ]
+      },
+      "background-dark": {
+        "role": "neutral",
+        "displayName": "Background Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0183 300.00)",
+          "oklch(26.43% 0.0183 300.00)",
+          "oklch(37.86% 0.0183 300.00)",
+          "oklch(49.29% 0.0183 300.00)",
+          "oklch(60.71% 0.0183 300.00)",
+          "oklch(72.14% 0.0183 300.00)",
+          "oklch(83.57% 0.0183 300.00)",
+          "oklch(95.00% 0.0183 300.00)"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Surface Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0248 298.72)",
+          "oklch(26.43% 0.0248 298.72)",
+          "oklch(37.86% 0.0248 298.72)",
+          "oklch(49.29% 0.0248 298.72)",
+          "oklch(60.71% 0.0248 298.72)",
+          "oklch(72.14% 0.0248 298.72)",
+          "oklch(83.57% 0.0248 298.72)",
+          "oklch(95.00% 0.0248 298.72)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0126 306.03)",
+          "oklch(26.43% 0.0126 306.03)",
+          "oklch(37.86% 0.0126 306.03)",
+          "oklch(49.29% 0.0126 306.03)",
+          "oklch(60.71% 0.0126 306.03)",
+          "oklch(72.14% 0.0126 306.03)",
+          "oklch(83.57% 0.0126 306.03)",
+          "oklch(95.00% 0.0126 306.03)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Muted Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0286 306.94)",
+          "oklch(26.43% 0.0286 306.94)",
+          "oklch(37.86% 0.0286 306.94)",
+          "oklch(49.29% 0.0286 306.94)",
+          "oklch(60.71% 0.0286 306.94)",
+          "oklch(72.14% 0.0286 306.94)",
+          "oklch(83.57% 0.0286 306.94)",
+          "oklch(95.00% 0.0286 306.94)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Line Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0282 308.93)",
+          "oklch(26.43% 0.0282 308.93)",
+          "oklch(37.86% 0.0282 308.93)",
+          "oklch(49.29% 0.0282 308.93)",
+          "oklch(60.71% 0.0282 308.93)",
+          "oklch(72.14% 0.0282 308.93)",
+          "oklch(83.57% 0.0282 308.93)",
+          "oklch(95.00% 0.0282 308.93)"
+        ]
+      },
+      "tint-dark": {
+        "role": "primary",
+        "displayName": "Tint Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.1104 302.66)",
+          "oklch(26.43% 0.1104 302.66)",
+          "oklch(37.86% 0.1104 302.66)",
+          "oklch(49.29% 0.1104 302.66)",
+          "oklch(60.71% 0.1104 302.66)",
+          "oklch(72.14% 0.1104 302.66)",
+          "oklch(83.57% 0.1104 302.66)",
+          "oklch(95.00% 0.1104 302.66)"
+        ]
+      },
+      "wash-dark": {
+        "role": "primary",
+        "displayName": "Wash Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.0432 305.84)",
+          "oklch(26.43% 0.0432 305.84)",
+          "oklch(37.86% 0.0432 305.84)",
+          "oklch(49.29% 0.0432 305.84)",
+          "oklch(60.71% 0.0432 305.84)",
+          "oklch(72.14% 0.0432 305.84)",
+          "oklch(83.57% 0.0432 305.84)",
+          "oklch(95.00% 0.0432 305.84)"
+        ]
+      },
+      "danger-dark": {
+        "role": "neutral",
+        "displayName": "Danger Dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.1044 19.57)",
+          "oklch(26.43% 0.1044 19.57)",
+          "oklch(37.86% 0.1044 19.57)",
+          "oklch(49.29% 0.1044 19.57)",
+          "oklch(60.71% 0.1044 19.57)",
+          "oklch(72.14% 0.1044 19.57)",
+          "oklch(83.57% 0.1044 19.57)",
+          "oklch(95.00% 0.1044 19.57)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "screen-title": {
+        "displayName": "Screen Title",
+        "purpose": "Top-level titles in the shared Screen component."
+      },
+      "section-title": {
+        "displayName": "Section Title",
+        "purpose": "Recurring list-group headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Native system text in the shared Copy component."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Shared button labels."
+      },
+      "detail": {
+        "displayName": "Detail",
+        "purpose": "Shared row descriptions."
+      },
+      "tab-label": {
+        "displayName": "Tab Label",
+        "purpose": "Four bottom-tab labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "demo-trace-refresh",
+        "value": "80ms",
+        "purpose": "Rotate waveform samples while demo ECG recording is active; disabled for Reduce Motion."
+      }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "description": "Shared native Button; the preview adds browser hover and keyboard focus feedback. Native busy state uses an activity indicator.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Save to diary</button>",
+      "css": ".ds-button-primary{border:0;border-radius:12px;min-height:52px;padding:13px 18px;font:600 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;text-align:center;cursor:pointer;background:#694D98;color:#F8F7FA;} .ds-button-primary:hover:not(:disabled){opacity:.8;} .ds-button-primary:active:not(:disabled){opacity:.8;} .ds-button-primary:focus-visible{outline:2px solid #694D98;outline-offset:3px;} .ds-button-primary:disabled{opacity:.5;cursor:default;} @media(prefers-color-scheme:dark){.ds-button-primary{background:#C8A9F5;color:#17141D;} .ds-button-primary:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "Shared native Button; the preview adds browser hover and keyboard focus feedback. Native busy state uses an activity indicator.",
+      "html": "<button class=\"ds-button-secondary\" type=\"button\">Read device instructions (IFU)</button>",
+      "css": ".ds-button-secondary{border:0;border-radius:12px;min-height:52px;padding:13px 18px;font:600 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;text-align:center;cursor:pointer;background:#F0EBF7;color:#694D98;} .ds-button-secondary:hover:not(:disabled){opacity:.8;} .ds-button-secondary:active:not(:disabled){opacity:.8;} .ds-button-secondary:focus-visible{outline:2px solid #694D98;outline-offset:3px;} .ds-button-secondary:disabled{opacity:.5;cursor:default;} @media(prefers-color-scheme:dark){.ds-button-secondary{background:#33283F;color:#C8A9F5;} .ds-button-secondary:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Sign-in Field",
+      "kind": "input",
+      "description": "Surface-filled native TextInput with a visible label. Browser focus outline is a documentation affordance.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" autocomplete=\"email\" placeholder=\"Your email address\" />",
+      "css": ".ds-field-label{display:block;margin-bottom:8px;color:#24202D;font:400 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-field{display:block;border:0;border-radius:10px;min-height:54px;padding:0 15px;background:#FFFFFF;color:#24202D;font:400 17px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-field:hover{outline:1px solid #E8E3EC;} .ds-field:focus-visible{outline:2px solid #694D98;outline-offset:2px;} @media(prefers-color-scheme:dark){.ds-field-label{color:#F5F1FA;} .ds-field{background:#24202D;color:#F5F1FA;} .ds-field:hover{outline-color:#393140;} .ds-field:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "input"
+    },
+    {
+      "name": "Four-tab Navigation",
+      "kind": "nav",
+      "description": "Native bottom-tab colors and labels, with SVG stand-ins for SF Symbols. Safe-area sizing is owned by native navigation, not this preview.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Main\"><button class=\"ds-tab\" type=\"button\" aria-current=\"page\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11 12 3l9 8M5 10v11h5v-7h4v7h5V10\"/></svg><span>Home</span></button><button class=\"ds-tab\" type=\"button\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3h14v18H5zM8 3v18M11 7h5M11 11h5\"/></svg><span>Diary</span></button><button class=\"ds-tab\" type=\"button\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9.5 9a2.5 2.5 0 0 1 5 0c0 2-2.5 2-2.5 4M12 17h.01\"/></svg><span>Support</span></button><button class=\"ds-tab\" type=\"button\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m10 3-1 3-3 1-3 3 2 2-2 2 3 3 3 1 1 3h4l1-3 3-1 3-3-2-2 2-2-3-3-3-1-1-3z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg><span>Settings</span></button></nav>",
+      "css": ".ds-tabs{display:flex;background:#FFFFFF;border-top:1px solid #E8E3EC;padding-top:8px;max-width:390px;} .ds-tab{display:flex;flex:1;flex-direction:column;align-items:center;gap:4px;min-height:44px;padding:0 8px 8px;border:0;background:transparent;color:#6B6476;font:500 12px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;cursor:pointer;} .ds-tab[aria-current]{color:#694D98;} .ds-tab:hover,.ds-tab:active{opacity:.8;} .ds-tab:focus-visible{outline:2px solid #694D98;outline-offset:-2px;} @media(prefers-color-scheme:dark){.ds-tabs{background:#24202D;border-color:#393140;} .ds-tab{color:#B4ABBE;} .ds-tab[aria-current]{color:#C8A9F5;} .ds-tab:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "navigation"
+    },
+    {
+      "name": "Diary Filters",
+      "kind": "chip",
+      "description": "A horizontally scrolling native filter strip; this preview shows All selected.",
+      "html": "<div class=\"ds-filters\" aria-label=\"Diary filters\"><button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">ECG</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Weight</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Questionnaire</button></div>",
+      "css": ".ds-filters{display:flex;gap:8px;overflow-x:auto;max-width:390px;} .ds-filter{flex-shrink:0;border:0;border-radius:10px;min-height:44px;padding:0 16px;background:#FFFFFF;color:#6B6476;font:600 14px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;cursor:pointer;} .ds-filter[aria-pressed=\"true\"]{background:#694D98;color:#F8F7FA;} .ds-filter:hover,.ds-filter:active{opacity:.8;} .ds-filter:focus-visible{outline:2px solid #694D98;outline-offset:-2px;} @media(prefers-color-scheme:dark){.ds-filter{background:#24202D;color:#B4ABBE;} .ds-filter[aria-pressed=\"true\"]{background:#C8A9F5;color:#17141D;} .ds-filter:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "filter-selected"
+    },
+    {
+      "name": "Instruction Card",
+      "kind": "card",
+      "description": "Flat native surface card with numbered, flexible instructions.",
+      "html": "<section class=\"ds-card\" aria-label=\"ECG preparation\"><p class=\"ds-step\"><span class=\"ds-step-number\">1</span><span>Sit comfortably and keep still.</span></p><p class=\"ds-step\"><span class=\"ds-step-number\">2</span><span>Use the electrode position described in your BP2 instructions.</span></p><p class=\"ds-step\"><span class=\"ds-step-number\">3</span><span>Press the ECG function button on the BP2 and record for 30 seconds.</span></p></section>",
+      "css": ".ds-card{max-width:342px;background:#FFFFFF;color:#24202D;border-radius:16px;padding:22px;font:400 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-step{display:flex;gap:14px;margin:0 0 20px;} .ds-step:last-child{margin-bottom:0;} .ds-step-number{color:#694D98;font-weight:600;} @media(prefers-color-scheme:dark){.ds-card{background:#24202D;color:#F5F1FA;} .ds-step-number{color:#C8A9F5;}}",
+      "refersTo": "card"
+    },
+    {
+      "name": "Ruled Device Row",
+      "kind": "custom",
+      "description": "Shared actionable Row with a flexible description and trailing chevron. Inline SVG substitutes for the native symbol.",
+      "html": "<button class=\"ds-row\" type=\"button\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 12h4l2-7 4 14 3-10 2 3h5\"/></svg><span class=\"ds-row-copy\"><span class=\"ds-row-title\">Viatom BP2</span><span class=\"ds-row-detail\">ECG monitor \u00b7 Instructions for use</span></span><svg class=\"ds-chevron\" aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-row{display:flex;align-items:center;gap:14px;min-height:76px;max-width:390px;width:100%;padding:16px 0;border:0;border-bottom:.5px solid #E8E3EC;background:transparent;color:#694D98;text-align:left;cursor:pointer;} .ds-row-copy{flex:1;display:flex;flex-direction:column;gap:4px;} .ds-row-title{color:#24202D;font:500 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-row-detail{color:#6B6476;font:400 14px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-chevron{width:13px;height:13px;color:#6B6476;} .ds-row:hover,.ds-row:active{opacity:.6;} .ds-row:focus-visible{outline:2px solid #694D98;outline-offset:2px;} @media(prefers-color-scheme:dark){.ds-row{color:#C8A9F5;border-color:#393140;} .ds-row-title{color:#F5F1FA;} .ds-row-detail,.ds-chevron{color:#B4ABBE;} .ds-row:focus-visible{outline-color:#C8A9F5;}}",
+      "refersTo": "row"
+    },
+    {
+      "name": "Next-task Panel",
+      "kind": "custom",
+      "description": "Initial daily panel with a named task and three-step progress. Static preview; the native app advances the action and removes it when complete.",
+      "html": "<section class=\"ds-care\"><h2 class=\"ds-care-title\">A little care.<br>Every day.</h2><p class=\"ds-care-copy\">Your daily check-in, one step at a time.</p><div class=\"ds-progress\" aria-label=\"0 of 3 daily tasks recorded\"><span class=\"ds-progress-bar\"></span><span class=\"ds-progress-bar\"></span><span class=\"ds-progress-bar\"></span><span class=\"ds-progress-label\">0 of 3</span></div><button class=\"ds-next-task\" type=\"button\"><span>Record your ECG</span><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></section>",
+      "css": ".ds-care{max-width:342px;padding:24px;border-radius:16px;background:#4B356D;color:#FFFFFF;font:400 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} .ds-care-title{margin:0 0 17px;font-size:28px;line-height:34px;font-weight:600;letter-spacing:-.6px;} .ds-care-copy{margin:0 0 17px;color:#DDD1ED;} .ds-progress{display:flex;align-items:center;gap:7px;margin-bottom:17px;} .ds-progress-bar{flex:1;height:4px;border-radius:2px;background:#7D669B;} .ds-progress-label{margin-left:6px;color:#DDD1ED;font-size:13px;} .ds-next-task{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:49px;padding:12px 16px;border:0;border-radius:10px;background:#FFFFFF;color:#4B356D;font:600 17px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;text-align:left;cursor:pointer;} .ds-next-task:hover,.ds-next-task:active{opacity:.85;} .ds-next-task:focus-visible{outline:2px solid #DDD1ED;outline-offset:3px;}",
+      "refersTo": "next-task-panel"
+    },
+    {
+      "name": "Synthetic ECG Trace",
+      "kind": "custom",
+      "description": "Static translation of the demo waveform. Native recording moves samples every 80ms unless Reduce Motion is enabled.",
+      "html": "<figure class=\"ds-trace\"><svg class=\"ds-trace-svg\" width=\"100%\" height=\"80\" viewBox=\"0 0 320 80\" role=\"img\" aria-label=\"Synthetic ECG waveform; not a clinical interpretation\"><path d=\"M0.00,52.00 L1.61,51.16 L3.22,49.47 L4.82,47.37 L6.43,49.47 L8.04,52.00 L9.65,52.00 L11.26,54.95 L12.86,12.00 L14.47,62.11 L16.08,52.00 L17.69,51.16 L19.30,47.79 L20.90,44.00 L22.51,46.53 L24.12,50.32 L25.73,52.00 L27.34,52.00 L28.94,52.00 L30.55,52.00 L32.16,52.00 L33.77,51.16 L35.38,49.47 L36.98,47.37 L38.59,49.47 L40.20,52.00 L41.81,52.00 L43.42,54.95 L45.03,12.00 L46.63,62.11 L48.24,52.00 L49.85,51.16 L51.46,47.79 L53.07,44.00 L54.67,46.53 L56.28,50.32 L57.89,52.00 L59.50,52.00 L61.11,52.00 L62.71,52.00 L64.32,52.00 L65.93,51.16 L67.54,49.47 L69.15,47.37 L70.75,49.47 L72.36,52.00 L73.97,52.00 L75.58,54.95 L77.19,12.00 L78.79,62.11 L80.40,52.00 L82.01,51.16 L83.62,47.79 L85.23,44.00 L86.83,46.53 L88.44,50.32 L90.05,52.00 L91.66,52.00 L93.27,52.00 L94.87,52.00 L96.48,52.00 L98.09,51.16 L99.70,49.47 L101.31,47.37 L102.91,49.47 L104.52,52.00 L106.13,52.00 L107.74,54.95 L109.35,12.00 L110.95,62.11 L112.56,52.00 L114.17,51.16 L115.78,47.79 L117.39,44.00 L118.99,46.53 L120.60,50.32 L122.21,52.00 L123.82,52.00 L125.43,52.00 L127.04,52.00 L128.64,52.00 L130.25,51.16 L131.86,49.47 L133.47,47.37 L135.08,49.47 L136.68,52.00 L138.29,52.00 L139.90,54.95 L141.51,12.00 L143.12,62.11 L144.72,52.00 L146.33,51.16 L147.94,47.79 L149.55,44.00 L151.16,46.53 L152.76,50.32 L154.37,52.00 L155.98,52.00 L157.59,52.00 L159.20,52.00 L160.80,52.00 L162.41,51.16 L164.02,49.47 L165.63,47.37 L167.24,49.47 L168.84,52.00 L170.45,52.00 L172.06,54.95 L173.67,12.00 L175.28,62.11 L176.88,52.00 L178.49,51.16 L180.10,47.79 L181.71,44.00 L183.32,46.53 L184.92,50.32 L186.53,52.00 L188.14,52.00 L189.75,52.00 L191.36,52.00 L192.96,52.00 L194.57,51.16 L196.18,49.47 L197.79,47.37 L199.40,49.47 L201.01,52.00 L202.61,52.00 L204.22,54.95 L205.83,12.00 L207.44,62.11 L209.05,52.00 L210.65,51.16 L212.26,47.79 L213.87,44.00 L215.48,46.53 L217.09,50.32 L218.69,52.00 L220.30,52.00 L221.91,52.00 L223.52,52.00 L225.13,52.00 L226.73,51.16 L228.34,49.47 L229.95,47.37 L231.56,49.47 L233.17,52.00 L234.77,52.00 L236.38,54.95 L237.99,12.00 L239.60,62.11 L241.21,52.00 L242.81,51.16 L244.42,47.79 L246.03,44.00 L247.64,46.53 L249.25,50.32 L250.85,52.00 L252.46,52.00 L254.07,52.00 L255.68,52.00 L257.29,52.00 L258.89,51.16 L260.50,49.47 L262.11,47.37 L263.72,49.47 L265.33,52.00 L266.93,52.00 L268.54,54.95 L270.15,12.00 L271.76,62.11 L273.37,52.00 L274.97,51.16 L276.58,47.79 L278.19,44.00 L279.80,46.53 L281.41,50.32 L283.02,52.00 L284.62,52.00 L286.23,52.00 L287.84,52.00 L289.45,52.00 L291.06,51.16 L292.66,49.47 L294.27,47.37 L295.88,49.47 L297.49,52.00 L299.10,52.00 L300.70,54.95 L302.31,12.00 L303.92,62.11 L305.53,52.00 L307.14,51.16 L308.74,47.79 L310.35,44.00 L311.96,46.53 L313.57,50.32 L315.18,52.00 L316.78,52.00 L318.39,52.00 L320.00,52.00\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\" /></svg><figcaption class=\"ds-trace-label\">Synthetic preview \u00b7 Demonstration only</figcaption></figure>",
+      "css": ".ds-trace{margin:0;max-width:390px;color:#694D98;} .ds-trace-svg{display:block;} .ds-trace-label{color:#6B6476;font:400 12px/24px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;} @media(prefers-color-scheme:dark){.ds-trace{color:#C8A9F5;} .ds-trace-label{color:#B4ABBE;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Daily care journal",
+    "overview": "A quiet native iPhone journal makes three daily check-ins easy to find and revisit. Ovok purple identifies actions and the daily-care panel; system typography, SF Symbols, and plain status language carry the rest of the interface.\n\nThe system is spacious without hiding useful detail. Measurements sit in ruled lists, instructions in tonal containers, and focused work in native sheets. Demonstration data is visibly labeled wherever it could be confused with a patient reading.",
+    "keyCharacteristics": [
+      "Native system text and SF Symbols.",
+      "Violet emphasis with separate light and dark palettes.",
+      "Flat surfaces, generous gutters, and thin list dividers.",
+      "Finite daily progress and explicit recording, save, and sync states."
+    ],
+    "rules": [
+      {
+        "name": "The Paired Appearance Rule",
+        "body": "Resolve theme colors together; keep the care panel's shared foreground and background combination intact.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Preserve tonal grouping and thin rules instead of adding decorative drop shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use the paired theme palette and the shared `Copy`, `Button`, `Row`, and `Screen` components.",
+      "**Do** let text scale and content scroll; preserve minimum touch targets.",
+      "**Do** name the next task and make the all-complete state finite.",
+      "**Do** keep synthetic data labels and actual save/sync status visible beside readings.",
+      "**Do** use SF Symbols, thin dividers, and tonal containers for native consistency."
+    ],
+    "donts": [
+      "**Don't** introduce custom display fonts, decorative shadows, or dashboard tiles into this journal.",
+      "**Don't** imply a pending or failed save has reached the patient account.",
+      "**Don't** turn waveform, weight, or attention colors into invented clinical judgments.",
+      "**Don't** treat browser preview interactions as native application behavior."
+    ]
+  }
+}

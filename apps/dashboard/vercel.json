@@ -1,0 +1,5 @@
+{
+  "buildCommand": "turbo run build --filter=ovok-rpm-clinician-dashboard",
+  "outputDirectory": "dist",
+  "framework": "vite"
+}

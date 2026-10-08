@@ -1,0 +1,43 @@
+{
+  "title": "Choose the dashboard composition",
+  "question": "Which clinician workbench should carry Ovok’s visual identity? Choose the composition that makes CHF review feel clearest.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Review Queue",
+      "kicker": "THE ROLL",
+      "lineage": "A clinician’s morning review board",
+      "thesis": "Start with the patients who need a clinician’s attention today, then open their ECG, weight, and check-in together.",
+      "palette": ["#F8F7FA", "#4B356D", "#694D98", "#F0EBF7", "#24202D"],
+      "materials": ["quiet lavender-tinted canvas", "soft white surfaces", "fine neutral dividers"],
+      "viewport": "A slim Ovok rail anchors a spacious CHF workbench: clinic context and date above, a compact review summary, then a clear patient queue with reading type, time, and status.",
+      "risk": "The queue must make its next action obvious without making synthetic readings look like clinical advice.",
+      "comp": ".impeccable/mocks/decision/review-queue.png"
+    },
+    {
+      "id": "signals-register",
+      "label": "Signals Setup Register",
+      "lineage": "A single-clinic system readiness register",
+      "thesis": "Put the connected clinic and read-only Signals readiness in view, then guide clinicians into the patient worklist.",
+      "palette": ["#F8F7FA", "#4B356D", "#694D98", "#F0EBF7", "#24202D"],
+      "materials": ["quiet lavender-tinted canvas", "soft white surfaces", "fine neutral dividers"],
+      "viewport": "A fixed Ovok rail sits beside a project heading, a restrained Signals status panel with setup guidance, and a patient queue that keeps names and open readings visible.",
+      "risk": "Setup can dominate the first screen unless status and next steps stay compact and clearly read-only.",
+      "comp": ".impeccable/mocks/decision/signals-register.png"
+    },
+    {
+      "id": "measurements-first",
+      "label": "Patient Measurement Review",
+      "lineage": "A patient-centered longitudinal review",
+      "thesis": "Keep one patient’s recent ECG, weight, and questionnaire together so a clinician can understand the latest check-in at a glance.",
+      "palette": ["#F8F7FA", "#4B356D", "#694D98", "#F0EBF7", "#24202D"],
+      "materials": ["quiet lavender-tinted canvas", "soft white surfaces", "fine neutral dividers"],
+      "viewport": "A calm clinic rail frames a patient identity and latest check-in, followed by three aligned reading sections with timestamps, source devices, and a subtle history strip.",
+      "risk": "The selected-patient focus may hide the breadth of today’s clinic work if the patient switcher is too quiet.",
+      "comp": ".impeccable/mocks/decision/measurements-first.png"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "steer": true
+}

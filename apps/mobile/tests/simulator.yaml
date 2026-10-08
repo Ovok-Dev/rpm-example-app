@@ -1,0 +1,71 @@
+appId: com.ovok.rpm.example
+---
+- launchApp
+- tapOn:
+    text: "Continue"
+    optional: true
+- tapOn:
+    text: "Close"
+    optional: true
+- assertVisible: "Home"
+- tapOn:
+    id: "tab-settings"
+- scrollUntilVisible:
+    element:
+      id: "reset-demo"
+    direction: DOWN
+- tapOn:
+    id: "reset-demo"
+- tapOn: "Reset demo"
+- tapOn:
+    id: "tab-home"
+- tapOn:
+    id: "start-checkin"
+- tapOn: "Start demo recording"
+- extendedWaitUntil:
+    visible: "Save to diary"
+    timeout: 40000
+- tapOn: "Save to diary"
+- assertVisible: "Check-in recorded."
+- tapOn: "Done"
+- scrollUntilVisible:
+    element:
+      id: "start-checkin"
+    direction: UP
+- tapOn:
+    id: "start-checkin"
+- tapOn: "Start demo measurement"
+- extendedWaitUntil:
+    visible: "Save to diary"
+    timeout: 10000
+- tapOn: "Save to diary"
+- tapOn: "Done"
+- scrollUntilVisible:
+    element:
+      id: "start-checkin"
+    direction: UP
+- tapOn:
+    id: "start-checkin"
+- tapOn: "As usual"
+- tapOn: "Continue"
+- tapOn: "No swelling"
+- tapOn: "Continue"
+- tapOn: "Comfortably"
+- tapOn: "Save questionnaire"
+- tapOn: "Done"
+- scrollUntilVisible:
+    element: "Done for today."
+    direction: UP
+- assertVisible: "3 of 3"
+- tapOn:
+    id: "tab-diary"
+- assertVisible: "Weight over time"
+- tapOn:
+    id: "tab-support"
+- assertVisible:
+    id: "ifu-0"
+- stopApp
+- launchApp
+- tapOn:
+    id: "tab-home"
+- assertVisible: "Done for today."

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T21:14:54.920Z",
+  "title": "Design System: Ovok CHF RPM Clinician Dashboard",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Ovok Purple",
+        "canonical": "#5C3F96",
+        "tonalRamp": ["oklch(15% 0.137 295.7)", "oklch(25% 0.137 295.7)", "oklch(35% 0.137 295.7)", "oklch(45% 0.137 295.7)", "oklch(55% 0.137 295.7)", "oklch(65% 0.137 295.7)", "oklch(75% 0.137 295.7)", "oklch(95% 0.137 295.7)"]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Deep Ovok Purple",
+        "canonical": "#483077",
+        "tonalRamp": ["oklch(15% 0.117 295.9)", "oklch(25% 0.117 295.9)", "oklch(35% 0.117 295.9)", "oklch(45% 0.117 295.9)", "oklch(55% 0.117 295.9)", "oklch(65% 0.117 295.9)", "oklch(75% 0.117 295.9)", "oklch(95% 0.117 295.9)"]
+      },
+      "navigation-selected": {
+        "role": "primary",
+        "displayName": "Selected Lavender",
+        "canonical": "#E9E3F2",
+        "tonalRamp": ["oklch(15% 0.021 304.0)", "oklch(25% 0.021 304.0)", "oklch(35% 0.021 304.0)", "oklch(45% 0.021 304.0)", "oklch(55% 0.021 304.0)", "oklch(65% 0.021 304.0)", "oklch(75% 0.021 304.0)", "oklch(95% 0.021 304.0)"]
+      },
+      "workspace": {
+        "role": "neutral",
+        "displayName": "Cool Workspace",
+        "canonical": "#F8F7FB",
+        "tonalRamp": ["oklch(15% 0.005 297.7)", "oklch(25% 0.005 297.7)", "oklch(35% 0.005 297.7)", "oklch(45% 0.005 297.7)", "oklch(55% 0.005 297.7)", "oklch(65% 0.005 297.7)", "oklch(75% 0.005 297.7)", "oklch(95% 0.005 297.7)"]
+      },
+      "navigation": {
+        "role": "neutral",
+        "displayName": "Lavender Rail",
+        "canonical": "#F3F0F9",
+        "tonalRamp": ["oklch(15% 0.012 301.3)", "oklch(25% 0.012 301.3)", "oklch(35% 0.012 301.3)", "oklch(45% 0.012 301.3)", "oklch(55% 0.012 301.3)", "oklch(65% 0.012 301.3)", "oklch(75% 0.012 301.3)", "oklch(95% 0.012 301.3)"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Reading White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["oklch(15% 0.000 89.9)", "oklch(25% 0.000 89.9)", "oklch(35% 0.000 89.9)", "oklch(45% 0.000 89.9)", "oklch(55% 0.000 89.9)", "oklch(65% 0.000 89.9)", "oklch(75% 0.000 89.9)", "oklch(95% 0.000 89.9)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-Black Plum",
+        "canonical": "#171426",
+        "tonalRamp": ["oklch(15% 0.035 290.6)", "oklch(25% 0.035 290.6)", "oklch(35% 0.035 290.6)", "oklch(45% 0.035 290.6)", "oklch(55% 0.035 290.6)", "oklch(65% 0.035 290.6)", "oklch(75% 0.035 290.6)", "oklch(95% 0.035 290.6)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Plum",
+        "canonical": "#676274",
+        "tonalRamp": ["oklch(15% 0.029 298.1)", "oklch(25% 0.029 298.1)", "oklch(35% 0.029 298.1)", "oklch(45% 0.029 298.1)", "oklch(55% 0.029 298.1)", "oklch(65% 0.029 298.1)", "oklch(75% 0.029 298.1)", "oklch(95% 0.029 298.1)"]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Quiet Plum",
+        "canonical": "#6E697A",
+        "tonalRamp": ["oklch(15% 0.027 298.9)", "oklch(25% 0.027 298.9)", "oklch(35% 0.027 298.9)", "oklch(45% 0.027 298.9)", "oklch(55% 0.027 298.9)", "oklch(65% 0.027 298.9)", "oklch(75% 0.027 298.9)", "oklch(95% 0.027 298.9)"]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Fine Divider",
+        "canonical": "#EAE8EF",
+        "tonalRamp": ["oklch(15% 0.010 299.2)", "oklch(25% 0.010 299.2)", "oklch(35% 0.010 299.2)", "oklch(45% 0.010 299.2)", "oklch(55% 0.010 299.2)", "oklch(65% 0.010 299.2)", "oklch(75% 0.010 299.2)", "oklch(95% 0.010 299.2)"]
+      },
+      "positive": {
+        "role": "tertiary",
+        "displayName": "Recorded Green",
+        "canonical": "#376A58",
+        "tonalRamp": ["oklch(15% 0.063 168.6)", "oklch(25% 0.063 168.6)", "oklch(35% 0.063 168.6)", "oklch(45% 0.063 168.6)", "oklch(55% 0.063 168.6)", "oklch(65% 0.063 168.6)", "oklch(75% 0.063 168.6)", "oklch(95% 0.063 168.6)"]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "Warm Amber",
+        "canonical": "#76501E",
+        "tonalRamp": ["oklch(15% 0.083 70.3)", "oklch(25% 0.083 70.3)", "oklch(35% 0.083 70.3)", "oklch(45% 0.083 70.3)", "oklch(55% 0.083 70.3)", "oklch(65% 0.083 70.3)", "oklch(75% 0.083 70.3)", "oklch(95% 0.083 70.3)"]
+      },
+      "synthetic-surface": {
+        "role": "neutral",
+        "displayName": "Synthetic Sand",
+        "canonical": "#FAF4E9",
+        "tonalRamp": ["oklch(15% 0.016 82.8)", "oklch(25% 0.016 82.8)", "oklch(35% 0.016 82.8)", "oklch(45% 0.016 82.8)", "oklch(55% 0.016 82.8)", "oklch(65% 0.016 82.8)", "oklch(75% 0.016 82.8)", "oklch(95% 0.016 82.8)"]
+      },
+      "danger": {
+        "role": "error",
+        "displayName": "Muted Red",
+        "canonical": "#874744",
+        "tonalRamp": ["oklch(15% 0.088 23.7)", "oklch(25% 0.088 23.7)", "oklch(35% 0.088 23.7)", "oklch(45% 0.088 23.7)", "oklch(55% 0.088 23.7)", "oklch(65% 0.088 23.7)", "oklch(75% 0.088 23.7)", "oklch(95% 0.088 23.7)"]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Plum",
+        "canonical": "#765D9D",
+        "tonalRamp": ["oklch(15% 0.101 301.0)", "oklch(25% 0.101 301.0)", "oklch(35% 0.101 301.0)", "oklch(45% 0.101 301.0)", "oklch(55% 0.101 301.0)", "oklch(65% 0.101 301.0)", "oklch(75% 0.101 301.0)", "oklch(95% 0.101 301.0)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Page title",
+        "purpose": "Patient review, directory, support, and Signals page titles."
+      },
+      "title": {
+        "displayName": "Surface title",
+        "purpose": "Patient names and larger content-section headings."
+      },
+      "compact": {
+        "displayName": "Compact copy",
+        "purpose": "Supporting descriptions and small data labels."
+      },
+      "body": {
+        "displayName": "Supporting copy",
+        "purpose": "Context, instructions, values, and questionnaire answers."
+      },
+      "label": {
+        "displayName": "Control label",
+        "purpose": "Button text and compact navigational or state labels."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Source text, timestamps, and dense supporting details."
+      },
+      "micro": {
+        "displayName": "Micro label",
+        "purpose": "Occasional metadata label where its context supplies the meaning."
+      },
+      "headline": {
+        "displayName": "Dialog title",
+        "purpose": "The 20px sign-in dialog heading."
+      }
+    },
+    "shadows": [
+      {
+        "name": "surface-lift",
+        "value": "0 2px 6px #261a3803",
+        "purpose": "Barely visible separation on measurement cards."
+      },
+      {
+        "name": "dialog-lift",
+        "value": "0 22px 90px #10091e40",
+        "purpose": "Lift the sign-in dialog above its backdrop."
+      },
+      {
+        "name": "mobile-navigation-lift",
+        "value": "0 -4px 18px #21172a08",
+        "purpose": "A faint edge above the fixed bottom navigation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-feedback",
+        "value": "150ms ease",
+        "purpose": "Button and navigation hover feedback; reduced when the user prefers less motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-navigation",
+        "value": "780px"
+      },
+      {
+        "name": "compact-page-gutters",
+        "value": "470px"
+      },
+      {
+        "name": "narrow-clinic-rail",
+        "value": "1160px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action for connecting the sandbox or submitting sign-in.",
+      "html": "<button class=\"ds-btn-primary\">Connect sandbox</button>",
+      "css": ".ds-btn-primary { min-height: 40px; padding: 0 16px; color: #fff; background: var(--purple); border: 1px solid transparent; border-radius: 9px; cursor: pointer; font: 670 11px Inter, ui-sans-serif, sans-serif; box-shadow: 0 2px 4px #5c3f9619; transition: background .15s ease, border-color .15s ease, transform .15s ease; } .ds-btn-primary:hover { background: var(--purple-dark); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quiet action with the same control shape and lower visual weight.",
+      "html": "<button class=\"ds-btn-secondary\">Open patient</button>",
+      "css": ".ds-btn-secondary { min-height: 40px; padding: 0 16px; color: #584183; background: #fff; border: 1px solid #e6e0ef; border-radius: 9px; cursor: pointer; font: 670 11px Inter, ui-sans-serif, sans-serif; transition: background .15s ease, border-color .15s ease; } .ds-btn-secondary:hover { background: #f4f1f8; } .ds-btn-secondary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }"
+    },
+    {
+      "name": "Patient Search",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "A neutral search or patient-selection field with a visible focus state.",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"10.8\" cy=\"10.8\" r=\"6.8\"></circle><path d=\"m16 16 4.2 4.2\"></path></svg><input type=\"search\" aria-label=\"Search patients\" placeholder=\"Search patients\"></label>",
+      "css": ".ds-search { display: flex; min-height: 42px; align-items: center; gap: 9px; padding: 0 12px; color: #676274; background: #fff; border: 1px solid #e6e3eb; border-radius: 9px; box-shadow: 0 1px 2px #21173a05; } .ds-search svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; } .ds-search input { width: 100%; min-width: 0; color: #393547; background: transparent; border: 0; outline: 0; font: 400 11px Inter, ui-sans-serif, sans-serif; } .ds-search:focus-within { border-color: #765d9d; box-shadow: 0 0 0 3px #eae3f4; } .ds-search input::placeholder { color: #676274; opacity: 1; }"
+    },
+    {
+      "name": "Measurement Surface",
+      "kind": "card",
+      "refersTo": "measurement-card",
+      "description": "A peer reading surface with a measurement, status, and device source.",
+      "html": "<article class=\"ds-measurement\"><header><span class=\"ds-mark\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M3 12h4l2.2-5 4.1 10 2.5-5H21\"></path></svg></span><div><strong>Weight</strong><small>Body weight</small></div><span class=\"ds-recorded\">Recorded</span></header><strong class=\"ds-value\">62.1 <small>kg</small></strong><p>Example reading</p><footer>Viatom F4 / LeScale <time>Today · 09:38</time></footer></article>",
+      "css": ".ds-measurement { display: flex; min-height: 280px; flex-direction: column; padding: 16px 16px 12px; color: #171426; background: #fff; border: 1px solid #eae8ef; border-radius: 11px; box-shadow: 0 2px 6px #261a3803; } .ds-measurement header { display: flex; align-items: center; gap: 9px; } .ds-measurement header > div { display: grid; gap: 3px; } .ds-measurement header strong { font: 670 11px Inter, ui-sans-serif, sans-serif; } .ds-measurement header small, .ds-measurement p { color: #676274; font: 400 10px Inter, ui-sans-serif, sans-serif; } .ds-mark { display: grid; width: 32px; height: 32px; place-items: center; color: #527c70; background: #eaf3ef; border-radius: 9px; } .ds-mark svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; } .ds-recorded { margin-left: auto; color: #376a58; font: 400 9px Inter, ui-sans-serif, sans-serif; } .ds-value { margin-top: 14px; font: 640 21px Inter, ui-sans-serif, sans-serif; } .ds-value small { color: #676274; font-size: 12px; } .ds-measurement p { margin: 4px 0; } .ds-measurement footer { display: flex; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 10px; color: #676274; border-top: 1px solid #f0eef3; font: 400 9px Inter, ui-sans-serif, sans-serif; }"
+    },
+    {
+      "name": "Source Chip",
+      "kind": "chip",
+      "refersTo": "source-chip",
+      "description": "A compact source or workspace status that includes text with its color cue.",
+      "html": "<span class=\"ds-source\"><span aria-hidden=\"true\"></span>Synthetic example</span>",
+      "css": ".ds-source { display: inline-flex; width: fit-content; align-items: center; gap: 6px; padding: 5px 8px; color: #76501e; background: #faf4e9; border: 1px solid #f1e9da; border-radius: 99px; font: 570 9px Inter, ui-sans-serif, sans-serif; } .ds-source > span { width: 5px; height: 5px; background: #bf8b4e; border-radius: 50%; }"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "description": "The active clinic destination; its label and icon are reused in the fixed mobile bottom bar.",
+      "html": "<button class=\"ds-nav-item is-active\" aria-current=\"page\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M3 12h4l2-5 4 10 2-5h6\"></path></svg>Overview</button>",
+      "css": ".ds-nav-item { display: flex; width: 100%; align-items: center; gap: 12px; padding: 11px 12px; color: #656174; background: transparent; border: 0; border-radius: 9px; cursor: pointer; font: 580 12px Inter, ui-sans-serif, sans-serif; transition: background .15s ease, color .15s ease; } .ds-nav-item svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-nav-item:hover, .ds-nav-item.is-active { color: #483077; background: #e9e3f2; } .ds-nav-item.is-active { font-weight: 680; } .ds-nav-item:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Review Desk",
+    "overview": "The dashboard gives a clinician one calm place to read a patient's latest check-in. A cool lavender workspace, a single clinic context, and white reading surfaces keep patient context visually distinct from the three peer measurement areas. The page favors clear source and time labels over decorative framing.\n\nIts visual voice is restrained and practical: Ovok purple marks actions and current navigation, while muted green, amber, and red communicate recorded, synthetic or caution, and error states. ECG, weight, and questionnaire marks use their own soft category tints; reading values stay near-black. The ECG trace and weight history are simple SVG data graphics, and the demo identifies synthetic records as examples. On narrow screens the clinic rail is hidden, its four destinations move to a fixed bottom bar, and the measurement cards stack in reading order.",
+    "keyCharacteristics": [
+      "Quiet lavender workspace with one purple action color and a soft selected-navigation tint.",
+      "Patient context first; ECG, weight, and questionnaire remain equal peers.",
+      "Fine dividers and soft corners define reading surfaces.",
+      "Compact labels support scanning while values and headings stay prominent."
+    ],
+    "rules": [
+      {
+        "name": "The Purple Action Rule",
+        "body": "Use Ovok purple for the primary action and current navigation; keep measurement surfaces white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Value Contrast Rule",
+        "body": "Use size, weight, and near-black color to separate measurement values from their supporting units and context.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Reading Rule",
+        "body": "Keep measurement surfaces quiet; use shadow only to distinguish a surface from what sits behind it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep reading values in near-black and their units, sources, and timestamps visually secondary on the same white card.",
+      "Do use the soft selected tint with purple for the current navigation item."
+    ],
+    "donts": [
+      "Don't use color alone to communicate a reading or connection state."
+    ]
+  }
+}

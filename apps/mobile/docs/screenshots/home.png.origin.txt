@@ -1,0 +1,1 @@
+Native iOS simulator capture of Ovok Care on iPhone 17 Pro, iOS 26.5, 8 October 2026. App uses synthetic demonstration data. Captured from the running app without visual alterations. Original app design follows the approved Ovok purple identity and daily care journal direction.
