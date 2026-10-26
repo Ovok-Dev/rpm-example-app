@@ -6,20 +6,14 @@ import {
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";
-import type { OvokClient } from "@ovok/core";
-import type { PatientChoice } from "../types";
+import type { PatientChoice, SignalsAlertView } from "../types";
 import { formatDateTime } from "../lib/formatting";
-
-type SignalsSettings = Awaited<ReturnType<OvokClient["getSignalsSettings"]>>;
-type RawSignal = Awaited<ReturnType<OvokClient["listSignalsRawAlerts"]>>["items"][number];
 
 interface SignalsPageProps {
   mode: "demo" | "sandbox";
   tenantCode: string;
-  settings: SignalsSettings | null;
-  alerts: RawSignal[];
+  alerts: SignalsAlertView[];
   patients: PatientChoice[];
-  settingsError: string | null;
   alertsError: string | null;
   loading: boolean;
   onConnect: () => void;
@@ -28,10 +22,8 @@ interface SignalsPageProps {
 export default function SignalsPage({
   mode,
   tenantCode,
-  settings,
   alerts,
   patients,
-  settingsError,
   alertsError,
   loading,
   onConnect,
@@ -43,7 +35,7 @@ export default function SignalsPage({
       <section className="page-heading">
         <div>
           <h1>Signals setup</h1>
-          <p className="page-subtitle">Read-only status and setup guidance for this clinic’s project.</p>
+          <p className="page-subtitle">Read-only alerts and setup guidance for this clinic’s project.</p>
         </div>
         <span className="read-only-tag"><ShieldCheck size={15} /> Read only</span>
       </section>
@@ -63,37 +55,6 @@ export default function SignalsPage({
         </section>
       ) : (
         <>
-          <section className="signals-settings-card">
-            <div className="section-heading">
-              <div><h2>Project status</h2><p>Values returned by Ovok Signals</p></div>
-              {settings && <span className="read-only-tag"><ShieldCheck size={15} /> Read only</span>}
-            </div>
-            {loading && !settings && <div className="loading-panel compact">Loading setup…</div>}
-            {settingsError && <div className="inline-error" role="alert">{settingsError}</div>}
-            {settings && (
-              <div className="settings-grid">
-                <div className="setting-tile">
-                  <span>Tenant scope</span>
-                  <strong>{settings.tenant === "project" ? "This project" : "Shared settings"}</strong>
-                  <small>Reported by the Ovok API</small>
-                </div>
-                <div className="setting-tile">
-                  <span>Episodic alerts</span>
-                  <strong className="setting-status">
-                    <span className={settings.settings.episodicAlerts ? "status-on" : "status-off"} />
-                    {settings.settings.episodicAlerts ? "Enabled" : "Disabled"}
-                  </strong>
-                  <small>Project behavior; this screen cannot change it</small>
-                </div>
-                <div className="setting-tile">
-                  <span>Changes</span>
-                  <strong>Configure in project setup</strong>
-                  <small>Changing this value can affect open episodes</small>
-                </div>
-              </div>
-            )}
-          </section>
-
           <section className="signals-alert-section">
             <div className="section-heading">
               <div><h2>Unacknowledged Signals alerts</h2><p>Individual alerts returned by Ovok; acknowledgement is not available here.</p></div>
@@ -130,7 +91,7 @@ export default function SignalsPage({
         <div className="guidance-icon"><BookOpenText size={19} /></div>
         <div className="guidance-copy">
           <h2>Complete setup in Ovok</h2>
-          <p>Use the project’s documented configuration and access policy. This example reads settings and raw alerts through the Ovok SDK only.</p>
+          <p>Use the project’s documented configuration and access policy. This example reads raw alerts through the Ovok SDK only.</p>
         </div>
         <a className="button button-secondary" href="https://docs.ovok.com/access-policies/signals" target="_blank" rel="noreferrer">
           Signals access guide <ExternalLink size={14} />

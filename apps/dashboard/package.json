@@ -16,8 +16,10 @@
     "check": "npm test && npm run build"
   },
   "dependencies": {
+    "@medplum/core": "5.2.3",
     "@medplum/fhirtypes": "5.2.3",
-    "@ovok/core": "0.4.33",
+    "@medplum/react-hooks": "5.2.3",
+    "@ovok/core": "0.4.49-dev.503",
     "lucide-react": "^1.53.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"

@@ -58,15 +58,11 @@ export interface PatientReview {
   activity: ActivityItem[];
 }
 
-export interface SignalsSettingsView {
-  tenant: "project" | "shared";
-  episodicAlerts: boolean;
-}
-
 export interface SignalsAlertView {
   id: string;
   patientId: string;
   reason: string;
+  message?: string | null;
   status: "ACTIVE" | "RESOLVED";
   acknowledgedAt: string | null;
   createdAt: string;
