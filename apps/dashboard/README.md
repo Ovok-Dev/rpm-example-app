@@ -67,10 +67,10 @@ To try real sandbox records, an administrator needs to prepare one Ovok project 
 2. Find the project’s tenant code and confirm practitioner login is enabled. Follow the [project setup guide](https://docs.ovok.com/authentication/project-setup) and [practitioner sign-in guide](https://docs.ovok.com/authentication/practitioner-login).
 3. Create or invite a practitioner in that project. Assign an AccessPolicy that allows only the patient and measurement reads the dashboard requires. Check the current [AccessPolicy documentation](https://docs.ovok.com/access-policies).
 4. Add the Signals read capabilities `signals_config:read` and `signals_alerts:read` to the practitioner policy. Patient read access still applies to patient-linked results. Use the exact custom rows and least-privilege rules in the [Signals access-policy guide](https://docs.ovok.com/access-policies/signals).
-5. Review the [Signals setup and architecture documentation](https://docs.ovok.com/signals) before relying on its project settings or alerts. This screen shows the project’s `episodicAlerts` setting as returned and does not change it.
+5. Review the [Signals setup and architecture documentation](https://docs.ovok.com/signals) before relying on its alerts. This screen shows open alerts as returned and does not change them.
 6. Set `VITE_OVOK_TENANT_CODE` to the project tenant code if it differs from `public-example`, restart Vite, choose **Connect sandbox**, and sign in as the practitioner.
 
-The dashboard reads Patients, Observations, QuestionnaireResponses, Signals settings, and raw Signals alerts via `@ovok/core`. Missing permissions appear as request errors; sandbox data never silently falls back to the synthetic demo. The backend remains the authority for access checks and returned records.
+The dashboard reads Patients, Observations, QuestionnaireResponses, and Signals alerts via `@ovok/core`. Missing permissions appear as request errors; sandbox data never silently falls back to the synthetic demo. The backend remains the authority for access checks and returned records.
 
 Read the [Ovok web SDK docs](https://docs.ovok.com/web-sdk) and [`@ovok/core` API reference](https://docs.ovok.com/web-sdk/core) when extending integration code. Check the live docs before changing authentication, patient access, Signals behavior, or API calls.
 

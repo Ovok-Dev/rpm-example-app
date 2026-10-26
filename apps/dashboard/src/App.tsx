@@ -5,8 +5,8 @@ import { DEMO_PATIENTS } from "./data/demo";
 import { listProjectPatients, loadPatientReview } from "./lib/patientData";
 import { loadDemoRelay, withDemoRelayReadings } from "./lib/demoRelay";
 import { isFhirLogicalId } from "./lib/fhirId";
-import { getOvokClient, tenantCode } from "./lib/ovokClient";
-import type { PageId, PatientChoice, PatientReview } from "./types";
+import { getOvokClient, getSignalsClient, tenantCode } from "./lib/ovokClient";
+import type { PageId, PatientChoice, PatientReview, SignalsAlertView } from "./types";
 import AppShell from "./components/AppShell";
 import PatientReviewPage from "./components/PatientReviewPage";
 import PatientsPage from "./components/PatientsPage";
@@ -15,8 +15,6 @@ import SignInDialog from "./components/SignInDialog";
 import SupportPage from "./components/SupportPage";
 
 type WorkspaceMode = "demo" | "sandbox";
-type SignalsSettings = Awaited<ReturnType<OvokClient["getSignalsSettings"]>>;
-type RawSignal = Awaited<ReturnType<OvokClient["listSignalsRawAlerts"]>>["items"][number];
 
 const demoChoices: PatientChoice[] = DEMO_PATIENTS.map((patient) => ({
   id: patient.id,
@@ -40,9 +38,7 @@ export default function App() {
   const [reviewError, setReviewError] = useState<string | null>(null);
   const [workspaceError, setWorkspaceError] = useState<string | null>(null);
   const [connectOpen, setConnectOpen] = useState(false);
-  const [signalsSettings, setSignalsSettings] = useState<SignalsSettings | null>(null);
-  const [rawSignals, setRawSignals] = useState<RawSignal[]>([]);
-  const [settingsError, setSettingsError] = useState<string | null>(null);
+  const [rawSignals, setRawSignals] = useState<SignalsAlertView[]>([]);
   const [alertsError, setAlertsError] = useState<string | null>(null);
   const [signalsLoading, setSignalsLoading] = useState(false);
   const closeConnectDialog = useCallback(() => setConnectOpen(false), []);
@@ -118,35 +114,20 @@ export default function App() {
 
     let isCurrentRequest = true;
     setSignalsLoading(true);
-    setSettingsError(null);
     setAlertsError(null);
 
-    getOvokClient().then((client) => Promise.allSettled([
-      client.getSignalsSettings(),
-      client.listSignalsRawAlerts({ acknowledged: false, limit: 20 }),
-    ])).then(([settingsResult, alertsResult]) => {
-      if (!isCurrentRequest) return;
-
-      if (settingsResult.status === "fulfilled") {
-        setSignalsSettings(settingsResult.value);
-      } else {
-        setSignalsSettings(null);
-        setSettingsError(errorMessage(settingsResult.reason));
-      }
-
-      if (alertsResult.status === "fulfilled") {
-        setRawSignals(alertsResult.value.items);
-      } else {
-        setRawSignals([]);
-        setAlertsError(errorMessage(alertsResult.reason));
-      }
-
-      setSignalsLoading(false);
+    getOvokClient().then((client) => getSignalsClient(client).signals.gateway.request<{ items: SignalsAlertView[] }>({
+      method: "GET",
+      path: ["alert"],
+      query: { page: 1, limit: 20, status: "ACTIVE" },
+    })).then((alerts) => {
+      if (isCurrentRequest) setRawSignals(alerts.items);
     }).catch((error: unknown) => {
       if (!isCurrentRequest) return;
-      setSettingsError(errorMessage(error));
+      setRawSignals([]);
       setAlertsError(errorMessage(error));
-      setSignalsLoading(false);
+    }).finally(() => {
+      if (isCurrentRequest) setSignalsLoading(false);
     });
 
     return () => {
@@ -161,7 +142,6 @@ export default function App() {
     await client.setActiveLogin(login);
     setMode("sandbox");
     setPage("home");
-    setSignalsSettings(null);
     setRawSignals([]);
     setWorkspaceError(null);
 
@@ -198,7 +178,6 @@ export default function App() {
     setMode("demo");
     setPage("home");
     setWorkspaceError(null);
-    setSignalsSettings(null);
     setRawSignals([]);
   }
 
@@ -261,10 +240,8 @@ export default function App() {
         <SignalsPage
           mode={mode}
           tenantCode={tenantCode}
-          settings={signalsSettings}
           alerts={rawSignals}
           patients={patientChoices}
-          settingsError={settingsError}
           alertsError={alertsError}
           loading={signalsLoading}
           onConnect={() => setConnectOpen(true)}
