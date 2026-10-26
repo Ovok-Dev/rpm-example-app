@@ -18,7 +18,7 @@ export function SignalsSetup({ client, demo }: { client: OvokClient | null; demo
     getSignalsClient(client).signals.gateway.request<{ items: RawAlert[] }>({
       method: "GET",
       path: ["alert"],
-      query: { page: 1, limit: 20, status: "ACTIVE" },
+      query: { acknowledged: false, page: 1, limit: 20 },
     }).then((result) => { if (current) setAlerts(result.items); })
       .catch((error: unknown) => { if (current) setAlertsError(errorMessage(error)); })
       .finally(() => { if (current) setLoading(false); });

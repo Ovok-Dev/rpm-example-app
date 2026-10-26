@@ -119,7 +119,7 @@ export default function App() {
     getOvokClient().then((client) => getSignalsClient(client).signals.gateway.request<{ items: SignalsAlertView[] }>({
       method: "GET",
       path: ["alert"],
-      query: { page: 1, limit: 20, status: "ACTIVE" },
+      query: { acknowledged: false, page: 1, limit: 20 },
     })).then((alerts) => {
       if (isCurrentRequest) setRawSignals(alerts.items);
     }).catch((error: unknown) => {
